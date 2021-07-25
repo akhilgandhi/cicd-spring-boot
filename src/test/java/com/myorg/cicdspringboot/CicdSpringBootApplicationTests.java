@@ -22,7 +22,7 @@ class CicdSpringBootApplicationTests {
 	@Test
 	void verifyHelloMessage() throws Exception {
 
-		String patternString = "(Hello from AWS Continuous Delivery!!! using host: ).*\\/\\d+.\\d+.\\d+.\\d+";
+		String patternString = "(Hello again from AWS Continuous Delivery!!! using host: ).*\\/\\d+.\\d+.\\d+.\\d+";
 		Matcher<String> regexMatcher = Matchers.matchesRegex(patternString);
 
 		this.mockMvc.perform(get("/home")).andExpect(status().isOk()).andExpect(content().string(regexMatcher));

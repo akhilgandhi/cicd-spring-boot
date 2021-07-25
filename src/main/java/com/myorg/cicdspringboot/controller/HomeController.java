@@ -15,7 +15,7 @@ public class HomeController {
 
     @GetMapping(path = "/home")
     public String home() {
-        String message = "Hello from AWS Continuous Delivery!!!";
+        String message = "Hello again from AWS Continuous Delivery!!!";
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message += " using host: " + ip;
